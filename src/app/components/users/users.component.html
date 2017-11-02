@@ -1,0 +1,5 @@
+<h2>User form</h2>
+<div *ngFor="let user of getUsers(); let o=odd; let e=even;">
+  <span [ngClass]="{odd:o, even:e}"> {{user.name}} <span class="infos">(id:{{user.id}} / email:{{user.email}})</span> </span>
+</div>
+<rc-user-form (eventEmmiter)="updateList($event)"></rc-user-form>
