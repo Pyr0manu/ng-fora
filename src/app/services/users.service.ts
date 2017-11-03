@@ -6,6 +6,8 @@ import {User} from "../models/models";
 @Injectable()
 export class UsersService {
 
+  logged:User;
+
   constructor(public http: Http) { }
 
   getUsers():Observable<User[]>{

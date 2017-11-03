@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Comment} from "../../../models/models";
+import {UsersService} from "../../../services/users.service";
 
 @Component({
   selector: 'rc-comment',
@@ -10,7 +11,9 @@ export class CommentComponent implements OnInit {
 
   @Input()comment:Comment;
 
-  constructor() { }
+  constructor(public usersService:UsersService) {
+    this.usersService;
+  }
 
   ngOnInit() {
   }

@@ -3,4 +3,4 @@
 <div *ngFor="let currentComment of topic.comments">
   <rc-comment [comment]="currentComment"></rc-comment>
 </div>
-<rc-comment-form></rc-comment-form>
+<rc-comment-form  [topic]="topic" (addComment)="updateComments($event)"></rc-comment-form>

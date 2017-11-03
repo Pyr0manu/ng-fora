@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Topic} from "../../../models/models";
+import {Comment, Topic} from "../../../models/models";
 
 @Component({
   selector: 'rc-topic-view',
@@ -13,6 +13,10 @@ export class TopicViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  updateComments(comment:Comment){
+    this.topic.comments.push(comment);
   }
 
 }

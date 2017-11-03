@@ -3,3 +3,7 @@
   <span [ngClass]="{odd:o, even:e}"> {{user.name}} <span class="infos">(id:{{user.id}} / email:{{user.email}})</span> </span>
 </div>
 <rc-user-form (eventEmmiter)="updateList($event)"></rc-user-form>
+<select [(ngModel)]="usersService.logged">
+  <option *ngFor="let user of getUsers()" [ngValue]="user">{{user.name}}</option>
+</select>
+logged: {{usersService.logged?.name}} <!-- verification du select -->
