@@ -1,0 +1,32 @@
+.comment-user{
+  font-weight: bold;
+}
+.comment-line{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button-up{
+  font-weight: bold;
+  background-color: Transparent;
+  color: white;
+  border: 0;
+  outline: none;
+}
+
+.button-up:hover{
+  color: lightgreen;
+}
+
+.button-down{
+  font-weight: bold;
+  background-color: Transparent;
+  color: white;
+  border: 0;
+  outline: none;
+}
+
+.button-down:hover{
+  color: red;
+}

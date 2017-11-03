@@ -1,0 +1,14 @@
+.add-user-button{
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.input-user{
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.user-form{
+  display: flex;
+  flex-direction: column;
+}

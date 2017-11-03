@@ -1,0 +1,28 @@
+.topic{
+  border: 3px dotted white;
+  border-radius: 1em;
+  padding: 1em;
+  padding-top: 0;
+  margin: 1em;
+  background-color: darkblue;
+  color: white;
+}
+
+.entete{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topic-user{
+  font-style: italic;
+}
+
+.odd{
+  background-color: rgba(173, 216, 230, 0.5);
+}
+
+.even{
+  background-color: rgba(173, 216, 230, 0.7);
+}

@@ -1,1 +1,11 @@
-<div><{{getCommentUser()}}> {{comment.content}}</div>
+<div class="comment-line">
+  <div class="comment-and-user">
+    <span class="comment-user"><{{getCommentUser()}}></span>
+    {{comment.content}}
+  </div>
+  <div class="score">
+    <button class="button-up">(+)</button>
+    {{comment.score}}
+    <button class="button-down">(-)</button>
+  </div>
+</div>

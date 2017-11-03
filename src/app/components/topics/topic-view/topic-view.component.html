@@ -1,6 +1,9 @@
-<h2>{{topic.title}}</h2>
-<div>by {{topic.user.name}}</div><br>
-<div *ngFor="let currentComment of topic.comments">
-  <rc-comment [comment]="currentComment"></rc-comment>
+<div class="topic">
+  <div class="entete"><h3>{{topic.title}}</h3>
+    <div class="topic-user">by {{topic.user.name}}</div></div>
+
+  <div *ngFor="let currentComment of topic.comments; let o=odd; let e=even;" [ngClass]="{odd:o, even:e}">
+    <rc-comment [comment]="currentComment"></rc-comment>
+  </div><br>
+  <rc-comment-form  [topic]="topic" (addComment)="updateComments($event)"></rc-comment-form>
 </div>
-<rc-comment-form  [topic]="topic" (addComment)="updateComments($event)"></rc-comment-form>

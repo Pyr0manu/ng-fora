@@ -1,5 +1,5 @@
-<form name="commentForm" #commentForm="ngForm">
-  <input type="text" [(ngModel)]="comment.content" name="commentContent" minlength="1">
-  <button [disabled]="!commentForm.form.valid" (click)="createComment()">Add Comment</button>
+<form class="comment-form" name="commentForm" #commentForm="ngForm">
+  <input class="input-comment" type="text" [(ngModel)]="comment.content" name="commentContent" minlength="1">
+  <button class="send-comment-button" [disabled]="!commentForm.form.valid" (click)="createComment()">Add Comment</button>
 
 </form>

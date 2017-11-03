@@ -42,7 +42,7 @@ export class ForumService {
 }
 
 
-var topics = [
+var topics:Topic[] = [
   {
     id: 1,
     title: "Star Trek > Star Wars",

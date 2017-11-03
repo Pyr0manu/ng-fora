@@ -24,6 +24,7 @@ export class CommentFormComponent implements OnInit {
   ngOnInit() {
 
     this.comment = {
+      score:0,
       id: 0,
       content: "",
       user: {

@@ -1,0 +1,15 @@
+.input-comment{
+  border-radius: 1em;
+  padding: 0.5em;
+  width: 80%;
+}
+
+.send-comment-button{
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+.comment-form{
+  display: flex;
+  justify-content: space-between;
+}

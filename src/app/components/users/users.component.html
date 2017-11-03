@@ -1,9 +1,17 @@
-<h2>User form</h2>
-<div *ngFor="let user of getUsers(); let o=odd; let e=even;">
-  <span [ngClass]="{odd:o, even:e}"> {{user.name}} <span class="infos">(id:{{user.id}} / email:{{user.email}})</span> </span>
+<div class="main-users">
+  <select [(ngModel)]="usersService.logged">
+    <option *ngFor="let user of getUsers()" [ngValue]="user">{{user.name}}</option>
+  </select>
+  <div class="user-list">
+    <h2>User list</h2>
+    <div *ngFor="let user of getUsers(); let o=odd; let e=even;" [ngClass]="{odd:o, even:e}">
+      <span> {{user.name}}</span> <span class="infos">(id:{{user.id}} / email:{{user.email}})</span>
+    </div>
+  </div>
+
+  <div class="user-form">
+    <h2>User form</h2>
+    <rc-user-form (eventEmmiter)="updateList($event)"></rc-user-form>
+    <!-- logged: {{usersService.logged?.name}}  verification du select -->
+  </div>
 </div>
-<rc-user-form (eventEmmiter)="updateList($event)"></rc-user-form>
-<select [(ngModel)]="usersService.logged">
-  <option *ngFor="let user of getUsers()" [ngValue]="user">{{user.name}}</option>
-</select>
-logged: {{usersService.logged?.name}} <!-- verification du select -->

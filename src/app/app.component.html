@@ -1,12 +1,14 @@
-<h1>Selected: {{state}}</h1>
+<main>
+  <h1>Welcome to your favourite forum !</h1>
+  <h2>Selected: {{state}}</h2>
 
-<label>Users : <input type="radio" name="choixAffichage"
-                      [(ngModel)]="state" [value]="'users'"></label>
+  <div><label>Topics : <input type="radio" name="choixAffichage"
+                         [(ngModel)]="state" [value]="'topics'"></label>
 
-<label>Topics : <input type="radio" name="choixAffichage"
-                       [(ngModel)]="state" [value]="'topics'"></label>
+  <label>Users : <input type="radio" name="choixAffichage"
+                        [(ngModel)]="state" [value]="'users'"></label></div>
 
-<rc-users *ngIf="state==='users'"></rc-users>
+  <rc-users *ngIf="state==='users'"></rc-users>
 
-<rc-topics *ngIf="state==='topics'"></rc-topics>
-
+  <rc-topics *ngIf="state==='topics'"></rc-topics>
+</main>
